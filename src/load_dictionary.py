@@ -27,4 +27,4 @@ def load(filename):
             "{}\nError opening {}. Terminating program.".format(e, filename),
             file=sys.stderr,
         )
-        sys.exit(1)
+        # sys.exit(1)

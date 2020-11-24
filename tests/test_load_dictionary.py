@@ -3,13 +3,12 @@ import sys, os
 
 import load_dictionary
 
+print(sys.path)
+
 
 def test_load_dictionary_file():
     fake_file_path = "..src/"
-    file_content_mock = """mock
-                            word
-                            new
-                            test"""
+    file_content_mock = "mock\nword\nnew\ntest"
 
     with patch("__main__.open", new=mock_open(read_data=file_content_mock)) as _file:
         actual = load_dictionary.load(fake_file_path)
