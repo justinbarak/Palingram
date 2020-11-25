@@ -1,7 +1,8 @@
 from unittest.mock import patch, mock_open
 import sys, os
 
-from src import load_dictionary
+
+import load_dictionary
 
 # _temp = importlib.import_module(".load_dictionary.py", package="src")
 # load = _temp.load
