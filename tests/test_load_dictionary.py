@@ -28,3 +28,13 @@ def test_load_dictionary_bad():
         assert False
     except AssertionError:
         assert True
+
+
+def test_load_dictionary_too_full():
+    fake_file_path = "file/path/mock.txt"
+    try:
+        # this line
+        load_dictionary.load(fake_file_path, "bob")
+        assert False  # Should raise error before
+    except TypeError:
+        assert True
